@@ -9,6 +9,7 @@ from itemloaders.processors import MapCompose, TakeFirst, Compose
 
 def clean_price(value):
     value = value.replace('\xa0', '')
+    value = value.replace(' ', '')
     try:
         value = int(value)
     except:
